@@ -67,11 +67,36 @@ func From(text string) string {
 
 	// IMPORTANT: Inefficiently replaces all the keywords into a cuter variant before we start processing.
 	text = Replacer.Replace(text)
-
 	runes := []rune(text)
+
+	ignoring := false
 	for index, char := range runes {
 		previousCharacter = currentCharacter
 		currentCharacter = unicode.ToLower(char)
+
+		// ADDITIONAL RULE: To ignore a specific region  of text, you have to add <: at the start and end with :>
+		if previousCharacter == '<' && currentCharacter == ':' {
+			result = result[:(len(result) - 1)]
+
+			ignoring = true
+			continue
+		}
+
+		if ignoring {
+			if previousCharacter == ':' && currentCharacter == '>' {
+				result = result[:(len(result) - 1)]
+				ignoring = false
+			} else {
+				result = append(result, currentCharacter)
+			}
+			continue
+		}
+
+		// ADDITIONAL RULE: Ignore all symbols since we cannot make modifications on them.
+		if unicode.IsSymbol(currentCharacter) {
+			result = append(result, currentCharacter)
+			continue
+		}
 
 		if currentCharacter == 'L' || currentCharacter == 'R' {
 			result = append(result, 'W')

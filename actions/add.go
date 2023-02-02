@@ -1,10 +1,10 @@
 package actions
 
 import (
+	"fmt"
 	"git-uwu/utils"
 	"git-uwu/uwuify"
 	"github.com/urfave/cli/v2"
-	"log"
 )
 
 func Add(ctx *cli.Context) error {
@@ -17,6 +17,6 @@ func Add(ctx *cli.Context) error {
 	if err != nil {
 		return err
 	}
-	log.Println(uwuify.From("added all files in " + path))
+	fmt.Println(uwuify.From("added all files in " + path))
 	return nil
 }

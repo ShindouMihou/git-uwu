@@ -1,0 +1,24 @@
+<:
+<div align="center">
+    It's not all about practicality, but more of entertainment.
+</div>
+:>
+
+##
+
+Git-UwU is a fun, experimental project that experiments around UwUifying Git Commits by using a custom UwUify implementation
+and Go-Git to enable a fun, and surely funny experience. It is not intended to be used in production, and doesn't implement
+all the features of Git such as signed commits, etc.
+
+#### Commands
+
+- `git-uwu add`: Adds a given path (`--path`) to the tracked files in Git.
+- `git-uwu commit`: Commits the tracked files to Git with a message (`--message`) that will be UwUified.
+
+#### Implementation
+
+Git-UwU's UwUifier is similar to what [Daniel-Liu-c0deb0t](https://github.com/Daniel-Liu-c0deb0t/uwu) created but with a few additional rules
+such as:
+- All symbols are ignored.
+- You can ignore a specific region of text by adding `<: your text here :>`
+- `ur` will not be UwUified because that felt weird.

@@ -1,11 +1,11 @@
 package actions
 
 import (
+	"fmt"
 	"git-uwu/utils"
 	"git-uwu/uwuify"
 	"github.com/go-git/go-git/v5"
 	"github.com/urfave/cli/v2"
-	"log"
 )
 
 func Commit(ctx *cli.Context) error {
@@ -22,6 +22,6 @@ func Commit(ctx *cli.Context) error {
 	if err != nil {
 		return err
 	}
-	log.Println(uwuify.From("Committed all the files with hash " + hash.String()))
+	fmt.Println(uwuify.From("Committed all the files with hash " + hash.String()))
 	return nil
 }
