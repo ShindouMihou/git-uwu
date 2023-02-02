@@ -22,6 +22,6 @@ func Commit(ctx *cli.Context) error {
 	if err != nil {
 		return err
 	}
-	fmt.Println(uwuify.From("Committed all the files with hash " + hash.String()))
+	fmt.Println(uwuify.From("Committed all the files with hash "), hash.String())
 	return nil
 }

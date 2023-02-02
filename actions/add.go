@@ -17,6 +17,6 @@ func Add(ctx *cli.Context) error {
 	if err != nil {
 		return err
 	}
-	fmt.Println(uwuify.From("added all files in " + path))
+	fmt.Println(uwuify.From("added all files in "), path)
 	return nil
 }
