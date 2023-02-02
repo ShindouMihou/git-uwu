@@ -1,0 +1,49 @@
+stutter_chance: 10
+emoji_chance: 2
+emojis:
+  - rawr x3
+  - owo
+  - uwu
+  - o.o
+  - '-.-'
+  - '>w<'
+  - (⑅˘o˘)
+  - (oᴗo)
+  - (˘ω˘)
+  - (u ᵕ u❁)
+  - σωσ
+  - òωó
+  - (u ﹏ u)
+  - ( ͡o ω ͡o )
+  - ʘwʘ
+  - ':3'
+  - xd
+  - nyaa~~
+  - '>_<'
+  - '>.<'
+  - '>w<'
+  - qwq
+  - rawr
+  - ^^
+  - ^^;;
+  - ' (ˆ ﻌ ˆ)♡'
+  - ' ^•ﻌ•^'
+  - /(^•ω•^)
+  - (✿oωo)
+replacer:
+  - small
+  - smol
+  - cute
+  - kawaii~
+  - fluff
+  - floof
+  - love
+  - luv
+  - stupid
+  - baka
+  - what
+  - nani
+  - meow
+  - nya~
+  - you
+  - u

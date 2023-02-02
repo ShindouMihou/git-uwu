@@ -4,14 +4,14 @@
 
 ##
 
-git-uwu is a fun, expewimentaw p-pwoject that expewiments awound uwuifying git commits by using a custom uwuify impwementation
-and go-git to enabwe a fun, and surewy funny expewience. it is nyot intended to be used in pwoduction, and doesn't impwement
-aww the features of git s-such as signed commits, etc.
+git-uwu is a-a f-fun, expewimentaw pwoject that expewiments awound uwuifying git commits by using a custom uwuify impwementation
+and g-go-git to enabwe a fun, and s-surewy funny expewience. it is nyot intended to be u-used in p-pwoduction, and d-doesn't i-impwement
+aww the features of git such as signed commits, e-etc.
 
-#### commands
+#### c-commands
 
-- `git-uwu add`: adds a g-given path (`--path`) to t-the twacked fiwes in git.
-- `git-uwu c-commit`: commits the twacked fiwes to git with a message (`--message`) that wiww be uwuified.
+- `git-uwu a-add`: a-adds a given path (`--path`) to the t-twacked fiwes in git.
+- `git-uwu commit`: commits the twacked fiwes to git with a message (`--message`) that w-wiww b-be uwuified.
 
 ##### exampwes
 ```shell
@@ -22,69 +22,20 @@ git push
 
 #### impwementation
 
-git-uwu's uwuifier i-is simiwar to nani [daniew-wiu-c0deb0t](https://github.com/daniel-liu-c0deb0t/uwu) cweated but with a few additionaw wuwes
+git-uwu's u-uwuifier is simiwar to nani [daniew-wiu-c0deb0t](https://github.com/daniel-liu-c0deb0t/uwu) cweated but with a few additionaw wuwes
 such as:
-- a-aww symbows awe ignyowed.
-- you can ignyowe a specific wegion of text by adding `<: ur text here :>`
-- `ur` wiww nyot be uwuified b-because that fewt weiwd.
+- aww symbows a-awe ignyowed.
+- y-you can ignyowe a specific wegion of t-text by adding `<: ur text here :>`
+- `ur` wiww n-nyot be uwuified because that fewt w-weiwd.
 
 #### configuring
 
-you can configure git-uwu b-by adding a-a `config.yaml` fiwe (exact extension, must be `.yaml`) and editing the fowwowing pwopewties:
-- `stutter_chance`: the wate of stutter t-to be done, for e-exampwe, if the v-vawue is 10 t-then it wouwd be 1 out of 10.
-- `emoji_chance`: the chance of a emoji to b-be appended.
-- `emojis`: the emojis to append at a chance evewy after a sentence.
+you can configure git-uwu by adding a `config.yaml` f-fiwe (exact extension, must be `.yaml`) and editing the fowwowing pwopewties:
+- `stutter_chance`: the wate of stutter t-to be done, for exampwe, i-if t-the vawue is 10 t-then it wouwd be 1 out of 10.
+- `emoji_chance`: the chance of a emoji to b-be a-appended.
+- `emojis`: t-the emojis to append at a-a chance evewy after a sentence.
 - `replacer`: wepwaces specific wowds to anyother such as `cúte` to `kawaii`
 
-##### defauwt configuration: 
-```yaml
-stutter_chance: 10
-emoji_chance: 2
-emojis:
-  - rawr x3
-  - owo
-  - uwu
-  - o.o
-  - '-.-'
-  - '>w<'
-  - (⑅˘o˘)
-  - (oᴗo)
-  - (˘ω˘)
-  - (u ᵕ u❁)
-  - σωσ
-  - òωó
-  - (u ﹏ u)
-  - ( ͡o ω ͡o )
-  - ʘwʘ
-  - ':3'
-  - xd
-  - nyaa~~
-  - '>_<'
-  - '>.<'
-  - '>w<'
-  - qwq
-  - rawr
-  - ^^
-  - ^^;;
-  - ' (ˆ ﻌ ˆ)♡'
-  - ' ^•ﻌ•^'
-  - /(^•ω•^)
-  - (✿oωo)
-replacer:
-  - small
-  - smol
-  - cute
-  - kawaii~
-  - fluff
-  - floof
-  - love
-  - luv
-  - stupid
-  - baka
-  - what
-  - nani
-  - meow
-  - nya~
-  - you
-  - u
-```
+##### defauwt configuration 
+due to some issues with the uwuifier changing up stuff, u can read the default configuration at [default_config.yaml](default_config.yaml).
+:>
