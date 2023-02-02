@@ -71,20 +71,20 @@ emojis:
   - /(^•ω•^)
   - (✿oωo)
 replacer:
+  - small
   - smol
-  - smol
+  - cute
   - kawaii~
-  - kawaii~
+  - fluff
   - floof
-  - floof
+  - love
   - luv
-  - luv
+  - stupid
   - baka
-  - baka
+  - what
   - nani
-  - nani
+  - meow
   - nya~
-  - nya~
-  - u
+  - you
   - u
 ```
