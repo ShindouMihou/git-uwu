@@ -16,3 +16,4 @@ jobs:
         goos: linux
         goarch: amd64
         binary_name: git-uwu
+        overwrite: true
