@@ -62,18 +62,13 @@ func From(text string) string {
 			continue
 		}
 
-		if currentCharacter == 'L' || currentCharacter == 'R' {
-			result = append(result, 'W')
-			continue
-		}
-
 		// ADDITIONAL RULE: We shouldn't replace words such as 'ur' and related since that sounds weird.
 		if currentCharacter == 'l' || currentCharacter == 'r' && (previousCharacter != 'u' && runes[index+1] != ' ') {
 			result = append(result, 'w')
 			continue
 		}
 
-		if (currentCharacter == 'O' || currentCharacter == 'o') && (previousCharacter == 'N' || previousCharacter == 'n') {
+		if currentCharacter == 'o' && previousCharacter == 'n' {
 			result = append(result, 'y', 'o')
 			continue
 		}
