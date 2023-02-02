@@ -1,8 +1,6 @@
-<:
-<div align="center">
+<:<div align="center">
     It's not all about practicality, but more of entertainment.
-</div>
-:>
+</div>:>
 
 ##
 
@@ -17,8 +15,70 @@ all the features of Git such as signed commits, etc.
 
 #### Implementation
 
-Git-UwU's UwUifier is similar to what [Daniel-Liu-c0deb0t](https://github.com/Daniel-Liu-c0deb0t/uwu) created but with a few additional rules
+Git-UwU's UwUifier is similar to what [Daniel-Liu-c0deb0t](<:https://github.com/Daniel-Liu-c0deb0t/uwu:>) created but with a few additional rules
 such as:
 - All symbols are ignored.
 - You can ignore a specific region of text by adding `<: your text here :>`
 - `ur` will not be UwUified because that felt weird.
+
+#### Configuring
+
+You can configure Git-UwU by adding a <:`config.yaml`:> file (exact extension, must be <:`.yaml`:>) and editing the following properties:
+- <:`stutter_chance`:>: the rate of stutter to be done, for example, if the value is 10 then it would be 1 out of 10.
+- <:`emoji_chance`:>: the chance of a emoji to be appended.
+- <:`emojis`:>: the emojis to append at a chance every after a sentence.
+- <:`replacer`:>: replaces specific words to another such as <:`cúte`:> to <:`kawaii`:>
+
+Default Configuration: <:
+```yaml
+stutter_chance: 10
+emoji_chance: 2
+emojis:
+  - rawr x3
+  - OwO
+  - UwU
+  - o.O
+  - '-.-'
+  - '>W<'
+  - (⑅˘O˘)
+  - (OᴗO)
+  - (˘ω˘)
+  - (U ᵕ U❁)
+  - σωσ
+  - òωó
+  - (U ﹏ U)
+  - ( ͡o ω ͡o )
+  - ʘwʘ
+  - ':3'
+  - XD
+  - nyaa~~
+  - '>_<'
+  - '>.<'
+  - '>w<'
+  - qwq
+  - rawr
+  - ^^
+  - ^^;;
+  - ' (ˆ ﻌ ˆ)♡'
+  - ' ^•ﻌ•^'
+  - /(^•ω•^)
+  - (✿oωo)
+replacer:
+  - small
+  - smol
+  - cute
+  - kawaii~
+  - fluff
+  - floof
+  - love
+  - luv
+  - stupid
+  - baka
+  - what
+  - nani
+  - meow
+  - nya~
+  - you
+  - u
+```
+:>

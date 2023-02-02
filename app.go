@@ -2,13 +2,21 @@ package main
 
 import (
 	"git-uwu/actions"
+	"git-uwu/configs"
 	"git-uwu/uwuify"
 	"github.com/urfave/cli/v2"
 	"log"
 	"os"
+	"strings"
 )
 
 func main() {
+	configs.Init()
+	uwuify.Emojis = configs.RunningConfiguration.RunicEmojis()
+	uwuify.Replacer = strings.NewReplacer(configs.RunningConfiguration.Replacer...)
+	uwuify.StutterChance = configs.RunningConfiguration.StutterChance
+	uwuify.EmojiChance = configs.RunningConfiguration.EmojiChance
+
 	app := &cli.App{
 		Commands: []*cli.Command{
 			{

@@ -1,57 +1,21 @@
 package uwuify
 
 import (
+	"git-uwu/configs"
 	"math/rand"
 	"strings"
 	"unicode"
 )
 
-var Emojis = [][]rune{
-	[]rune("rawr x3"),
-	[]rune("OwO"),
-	[]rune("UwU"),
-	[]rune("o.O"),
-	[]rune("-.-"),
-	[]rune(">W<"),
-	[]rune("(⑅˘O˘)"),
-	[]rune("(OᴗO)"),
-	[]rune("(˘ω˘)"),
-	[]rune("(U ᵕ U❁)"),
-	[]rune("σωσ"),
-	[]rune("òωó"),
-	[]rune("(U ﹏ U)"),
-	[]rune("( ͡o ω ͡o )"),
-	[]rune("ʘwʘ"),
-	[]rune(":3"),
-	[]rune("XD"),
-	[]rune("nyaa~~"),
-	[]rune(">_<"),
-	[]rune(">.<"),
-	[]rune(">w<"),
-	[]rune("qwq"),
-	[]rune("rawr"),
-	[]rune("^^"),
-	[]rune("^^;;"),
-	[]rune(" (ˆ ﻌ ˆ)♡"),
-	[]rune(" ^•ﻌ•^"),
-	[]rune("/(^•ω•^)"),
-	[]rune("(✿oωo)"),
-}
+var Emojis = configs.RunningConfiguration.RunicEmojis()
 
 // StutterChance determines the chances of a stutter, for example, the default value is 10 which means
 // there is a 1 out of 10 chance that a stutter will be encountered.
-var StutterChance = 10
+var StutterChance = configs.RunningConfiguration.StutterChance
+var EmojiChance = configs.RunningConfiguration.EmojiChance
 
 // Replacer handles replacing different keywords into cuter keywords.
-var Replacer = strings.NewReplacer(
-	"small", "smol",
-	"cute", "kawaii~",
-	"fluff", "floof",
-	"love", "luv",
-	"stupid", "baka",
-	"what", "nani",
-	"meow", "nya~",
-	"you", "u")
+var Replacer = strings.NewReplacer(configs.RunningConfiguration.Replacer...)
 
 // From creates an uwuified variant of the given text based on a simplified implementation of https://github.com/Daniel-Liu-c0deb0t/uwu
 // which is less performant and efficient but does the work nicely.
@@ -93,7 +57,7 @@ func From(text string) string {
 		}
 
 		// ADDITIONAL RULE: Ignore all symbols since we cannot make modifications on them.
-		if unicode.IsSymbol(currentCharacter) {
+		if !unicode.IsLetter(currentCharacter) {
 			result = append(result, currentCharacter)
 			continue
 		}
@@ -114,7 +78,9 @@ func From(text string) string {
 			continue
 		}
 
-		if currentCharacter == ' ' && (previousCharacter == ',' || previousCharacter == '!' || previousCharacter == '.' || previousCharacter == '?') {
+		if currentCharacter == ' ' &&
+			(previousCharacter == '!' || previousCharacter == '.' || previousCharacter == '?') &&
+			rand.Intn(EmojiChance) == 1 {
 			result = append(result, ' ')
 			result = append(result, emojis[rand.Intn(emojisLen)]...)
 
@@ -122,7 +88,7 @@ func From(text string) string {
 			continue
 		}
 
-		if previousCharacter == ' ' && rand.Intn(StutterChance) == 1 {
+		if previousCharacter == ' ' && unicode.IsLetter(currentCharacter) && rand.Intn(StutterChance) == 1 {
 			result = append(result, currentCharacter, '-', currentCharacter)
 			continue
 		}
