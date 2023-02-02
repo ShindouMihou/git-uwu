@@ -1,7 +1,6 @@
 package configs
 
 import (
-	"fmt"
 	"gopkg.in/yaml.v2"
 	"log"
 	"os"
@@ -12,7 +11,6 @@ var RunningConfiguration = DefaultConfiguration
 func Init() {
 	bytes, err := os.ReadFile("config.yaml")
 	if err != nil {
-		fmt.Println("configuration not found, using default configuration.")
 		return
 	}
 	var configuration Config
