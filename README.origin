@@ -13,6 +13,13 @@ all the features of Git such as signed commits, etc.
 - `git-uwu add`: Adds a given path (`--path`) to the tracked files in Git.
 - `git-uwu commit`: Commits the tracked files to Git with a message (`--message`) that will be UwUified.
 
+##### Examples
+<:```shell
+git-uwu add --path .
+git-uwu commit -m "Some commit message"
+git push
+```:>
+
 #### Implementation
 
 Git-UwU's UwUifier is similar to what [Daniel-Liu-c0deb0t](<:https://github.com/Daniel-Liu-c0deb0t/uwu:>) created but with a few additional rules
@@ -29,7 +36,7 @@ You can configure Git-UwU by adding a <:`config.yaml`:> file (exact extension, m
 - <:`emojis`:>: the emojis to append at a chance every after a sentence.
 - <:`replacer`:>: replaces specific words to another such as <:`cúte`:> to <:`kawaii`:>
 
-Default Configuration: <:
+##### Default Configuration: <:
 ```yaml
 stutter_chance: 10
 emoji_chance: 2

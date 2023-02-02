@@ -4,32 +4,39 @@
 
 ##
 
-git-uwu is a fun, expewimentaw pwoject that expewiments awound uwuifying git c-commits by using a custom uwuify impwementation
-and go-git to enabwe a fun, a-and surewy funny expewience. it is nyot intended to be used in pwoduction, and doesn't impwement
+git-uwu is a fun, expewimentaw p-pwoject that expewiments awound uwuifying git commits by using a custom uwuify impwementation
+and go-git to enabwe a fun, and surewy funny expewience. it is nyot intended to be used in pwoduction, and doesn't impwement
 aww the features of git s-such as signed commits, etc.
 
 #### commands
 
-- `git-uwu add`: adds a given path (`--path`) to the twacked fiwes in git.
-- `git-uwu commit`: commits the twacked fiwes t-to git with a m-message (`--message`) that wiww be uwuified.
+- `git-uwu add`: adds a g-given path (`--path`) to t-the twacked fiwes in git.
+- `git-uwu c-commit`: commits the twacked fiwes to git with a message (`--message`) that wiww be uwuified.
+
+##### exampwes
+```shell
+git-uwu add --path .
+git-uwu commit -m "some commit message"
+git push
+```
 
 #### impwementation
 
-git-uwu's uwuifier is simiwar to nani [daniew-wiu-c0deb0t](https://github.com/daniel-liu-c0deb0t/uwu) c-cweated but with a-a few additionaw wuwes
+git-uwu's uwuifier i-is simiwar to nani [daniew-wiu-c0deb0t](https://github.com/daniel-liu-c0deb0t/uwu) cweated but with a few additionaw wuwes
 such as:
-- aww symbows awe ignyowed.
-- you can ignyowe a specific wegion of text by adding ` ur text here `
-- `ur` wiww nyot be uwuified because that fewt weiwd.
+- a-aww symbows awe ignyowed.
+- you can ignyowe a specific wegion of text by adding `<: ur text here :>`
+- `ur` wiww nyot be uwuified b-because that fewt weiwd.
 
 #### configuring
 
-you can configure git-uwu by adding a `config.yaml` fiwe (exact extension, must be `.yaml`) and editing the fowwowing pwopewties:
-- `stutter_chance`: t-the wate of s-stutter to be done, for exampwe, if the vawue is 10 then it w-wouwd b-be 1 out of 10.
-- `emoji_chance`: the chance of a emoji to be appended.
-- `emojis`: the emojis t-to append at a chance evewy after a sentence.
-- `replacer`: wepwaces specific wowds to anyother s-such as `cúte` t-to `kawaii`
+you can configure git-uwu b-by adding a-a `config.yaml` fiwe (exact extension, must be `.yaml`) and editing the fowwowing pwopewties:
+- `stutter_chance`: the wate of stutter t-to be done, for e-exampwe, if the v-vawue is 10 t-then it wouwd be 1 out of 10.
+- `emoji_chance`: the chance of a emoji to b-be appended.
+- `emojis`: the emojis to append at a chance evewy after a sentence.
+- `replacer`: wepwaces specific wowds to anyother such as `cúte` to `kawaii`
 
-defauwt configuration: 
+##### defauwt configuration: 
 ```yaml
 stutter_chance: 10
 emoji_chance: 2
